@@ -1,4 +1,3 @@
-
 version: '3.8'
 services:
   reva:
@@ -87,3 +86,11 @@ services:
       - 8222:8222
     volumes:
       - ./nats/nats-server.conf:/nats-server.conf
+
+  maildump:
+    container_name: maildump
+    build:
+      context: ./maildump
+    ports:
+      - 1025:1025
+      - 1080:1080
