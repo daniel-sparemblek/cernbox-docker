@@ -11,6 +11,7 @@ services:
     volumes:
       - ./reva:/home/reva
       - ./reva/examples/local:/etc/revad
+      - ./etc/revad/templates:/etc/revad/templates
 
   reva-extra:
     container_name: reva-extra
